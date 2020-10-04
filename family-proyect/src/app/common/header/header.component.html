@@ -1,66 +1,73 @@
-<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">-->
 
-<header class="header-area">
-
-
-    <!-- Navbar Area -->
-    <div class="faith-main-menu">
-        <div class="classy-nav-container breakpoint-off">
+    <header class="header_area mb-5">
+        <div class="header_top">
             <div class="container">
-                <!-- Menu -->
-                <nav class="classy-navbar justify-content-between" id="faithNav">
-
-                    <!-- Logo -->
-                    <a class="nav-brand" href="index.html"><img src="assets/img/core-img/logo.png" alt=""></a>
-
-                    <!-- Navbar Toggler -->
-                    <div class="classy-navbar-toggler">
-                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                <div class="row">
+                    <div class="col-sm-6 col-5">
+                        <ul class="nav social_icon">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                        </ul>
                     </div>
-                    
-
-                    <!-- Menu -->
-                    <div class="classy-menu">
-
-                        <!-- Close Button -->
-                        <div class="classycloseIcon">
-                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                    <div class="col-sm-6 col-7">
+                        <div class="top_btn d-flex justify-content-end">
+                            <a href="#">Mi Perfil</a>
+                            <a href="#">Donaciones</a>
                         </div>
-
-                        <!-- Nav Start -->
-                        <div class="classynav">
-                            <ul>
-                                <li><a routerLink="/">Inicio</a></li>
-                                <li class="dropdown mx-auto"><a href="#">Temas</a>
-                                    <ul class="dropdown">
-                                        <li><a href="index.html">Home</a></li>
-                                        <li><a href="ministries.html">Ministries</a></li>
-                                        <li><a href="sermons.html">Sermons</a></li>
-                                        <li><a href="blog.html">Blog</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                        <li><a href="elements.html">Elements</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="ministries.html">Tips</a></li>
-                                <li><a routerLink="/galeria">Galeria</a></li>
-                                <li><a href="contact.html">Sugerencias</a></li>
-                            </ul>
-
-                            <!-- Search Button -->
-                            <div class="search-btn">
-                                <a [routerLink]="['login']" >Login <i class="fa fa-sign-in fa-3" width="50px" aria-hidden="true"></i>   </a>
-                            </div>
-
-                            <!-- Donate Button -->
-                            <div class="donate-btn">
-                                <a href="#">Donación</a>
-                            </div>
-
-                        </div>
-                        <!-- Nav End -->
                     </div>
-                </nav>
+                </div>
             </div>
         </div>
-    </div>
-</header>
+        <div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <a class="navbar-brand logo_h" href="index.html"><img src="assets/image/Logo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav menu_nav ml-auto">
+                        <li class="nav-item active"><a class="nav-link" href="index.html">Inicio</a></li> 
+                        <li class="nav-item"><a class="nav-link" href="ministries.html">Recomendaciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sermons.html">Testimonios</a></li>
+                        <li class="nav-item submenu dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Event</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a class="nav-link" href="event.html">Event</a></li>
+                                <li class="nav-item"><a class="nav-link" href="event-details.html">Event Details</a></li>
+                            </ul>
+                        </li> 
+                        <li class="nav-item submenu dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Detalles</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a class="nav-link" href="about-us.html">Acerca de</a></li>
+                                <li class="nav-item"><a class="nav-link" href="donation.html">Donacion</a></li>
+                                <li class="nav-item"><a class="nav-link" routerLink="/galeria">Galería</a></li>
+                                <li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
+                            </ul>
+                        </li> 
+                        <li class="nav-item submenu dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Temas</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a class="nav-link" href="blog.html">Tema</a></li>
+                                <li class="nav-item"><a class="nav-link" href="blog-single.html">Todos los temas</a></li>
+                            </ul>
+                        </li> 
+                        
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contactanos</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="nav-item"><a href="#" class="search"><i class="lnr lnr-magnifier"></i></a></li>
+                    </ul>
+                </div> 
+            </div>
+        </nav>
+       </div>
+    </header>
+    
