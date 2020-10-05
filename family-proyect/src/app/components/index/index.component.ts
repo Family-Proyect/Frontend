@@ -35,21 +35,6 @@ export class IndexComponent implements OnInit {
             console.log(data[key]);
             this.temas.push(data[key]);
           }
-        // this.temas=data;
-        // for (let keyCategoria in data) {
-        //   let NewsCater = data[keyCategoria];
-        //   console.log("categoria")
-        //   console.log(NewsCater);
-        //   this.=this.contador_noticias+1;
-        //   this.arrayCategoria.push(keyCategoria)
-        //   for(let keyNoticia in NewsCater){
-        //     let noticia = NewsCater[keyNoticia];
-        //     console.log("noticia")
-        //     this.arrayNoticiasCate.push(noticia)
-        //     console.log(noticia);
-        //  }
-        // }
-        // ;console.log(this.contador_noticias);
       }
       ,(err: HttpErrorResponse)=>{console.log("Un error ha ocurrido")}
       ,()=>console.log("solicitud finalizada OK")
