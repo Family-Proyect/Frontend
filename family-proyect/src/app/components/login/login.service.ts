@@ -8,19 +8,23 @@ import { CookieService } from "ngx-cookie-service";
 })
 export class LoginService {
   isLoggedIn = false;
+  authInstance: gapi.auth2.GoogleAuth;
 
   constructor(private http: HttpClient, private cookies: CookieService) {}
 
   login(user: any): Observable<any> {
-    //return this.http.post("https://reqres.in/api/login", user);    
     return this.http.post("http://127.0.0.1:8000/api-token-auth/", user);
-    //return this.http.post("http://127.0.0.1:8000/cambio/", user);
-
   }
+  
   setUser(name: string){
     localStorage.setItem('user', name);
-
   }
+
+  setAuthGoogle(auth:any){
+    
+    this.authInstance=auth;
+  }
+
 
   setToken(token: string) {
     localStorage.setItem('token', token);
@@ -28,11 +32,15 @@ export class LoginService {
     
   }
   setLogin(isLoggedIn: boolean) {
-    this.isLoggedIn=isLoggedIn;
-    
+    this.isLoggedIn=isLoggedIn;    
+  }
+  setIsLogin(isLoggedIn: string) {
+    localStorage.setItem('isLogged', isLoggedIn);
   }
   public logout(){
-    localStorage.removeItem("token");
+    if(this.authInstance!=null)
+      this.authInstance.signOut();
+    // localStorage.removeItem("token");
     localStorage.clear();
   }
   getToken() {

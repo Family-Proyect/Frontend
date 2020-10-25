@@ -4,17 +4,18 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-5">
-                        <ul class="nav social_icon">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                        <ul class="nav social_icon " style=" text-align: center!important;">
+                            <li style="text-align: center!important;"><a href="#"><i class="fa fa-facebook" style="padding-top: 10px;"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter " style="padding-top: 10px;"></i></a></li>
+                            <li><a href="#"><i class="fa fa-dribbble" style="padding-top: 10px;"></i></a></li>
+                            <li><a href="#"><i class="fa fa-behance" style="padding-top: 10px;"></i></a></li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-7">
                         <div class="top_btn d-flex justify-content-end">
-                            <a href="#">Mi Perfil</a>
-                            <a [routerLink]="['login']" >Iniciar Sesion</a>
+                            <a *ngIf="showProfile" [routerLink]="['/calendar']">Mi Perfil</a>
+                            <a *ngIf="showLogin" [routerLink]="['/login']" >Iniciar Sesion</a>
+                            <a *ngIf="showClose" href="javascript.void(0)" (click)="logout()" >Cerrar Sesion</a>
                             <a href="#">Donaciones</a>
                         </div>
                     </div>
@@ -34,10 +35,10 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                     <ul class="nav navbar-nav menu_nav ml-auto">
-                        <li class="nav-item active"><a class="nav-link" href="index.html">Inicio</a></li> 
-                        <li class="nav-item"><a class="nav-link" href="ministries.html">Recomendaciones</a></li>
-                        <li class="nav-item"><a class="nav-link" href="sermons.html">Testimonios</a></li>
-                        <li class="nav-item"><a class="nav-link"  routerLink="/galeria">Galeria</a></li>
+                        <li [routerLinkActive]="['active']" class="nav-item"><a class="nav-link"  routerLink="/index">Inicio</a></li> 
+                        <li [routerLinkActive]="['active']" class="nav-item"><a class="nav-link" href="ministries.html">Recomendaciones</a></li>
+                        <li [routerLinkActive]="['active']" class="nav-item"><a class="nav-link" routerLink="/testimonios">Testimonios</a></li>
+                        <li [routerLinkActive]="['active']" class="nav-item"><a class="nav-link"  routerLink="/galeria">Galeria</a></li>
 
                         <li class="nav-item submenu dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Event</a>
@@ -51,6 +52,7 @@
                             <ul class="dropdown-menu">
                                 <li class="nav-item"><a class="nav-link" href="about-us.html">Acerca de</a></li>
                                 <li class="nav-item"><a class="nav-link" href="donation.html">Donacion</a></li>
+                                
                                 <li class="nav-item"><a class="nav-link" routerLink="/galeria">Galería</a></li>
                                 <li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
                             </ul>
@@ -58,12 +60,12 @@
                         <li class="nav-item submenu dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Temas</a>
                             <ul class="dropdown-menu">
-                                <li class="nav-item"><a class="nav-link" href="blog.html">Tema</a></li>
-                                <li class="nav-item"><a class="nav-link" href="blog-single.html">Todos los temas</a></li>
+                                <li class="nav-item"><a class="nav-link" routerLink="/temas">Tema</a></li>
+                                <li class="nav-item"><a class="nav-link"  routerLink="/contact">Todos los temas</a></li>
                             </ul>
                         </li> 
                         
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contactanos</a></li>
+                        <li [routerLinkActive]="['active']" class="nav-item"><a class="nav-link" routerLink="/contact">Contactanos</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="nav-item"><a href="#" class="search"><i class="lnr lnr-magnifier"></i></a></li>
