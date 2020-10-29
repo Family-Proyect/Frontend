@@ -37,13 +37,13 @@ export class TemasDetailsComponent implements OnInit {
   id_tema:string;
   id_category:string;
   video:any;
-
-
+  nombre_categoria:string;
   ngOnInit(): void {
     window.scrollTo(0, 0);
     /*Refresh the current page if the params url change*/
     this.activatedRoute.paramMap.subscribe(params => {
       this.id_tema=this.activatedRoute.snapshot.params.id;
+
       this.service_tema.get_tema(this.id_tema).subscribe(data=>{
         console.log(data);
         this.tema_current=data;
@@ -62,7 +62,7 @@ export class TemasDetailsComponent implements OnInit {
     
     this.id_tema=this.activatedRoute.snapshot.params.id;
     this.id_category=this.activatedRoute.snapshot.params.id_categoria;
-    
+
     this.service_categorias.fetch_categorias().subscribe(data=>{
       this.categorias=data;
     })

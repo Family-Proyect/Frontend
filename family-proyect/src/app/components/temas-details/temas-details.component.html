@@ -7,11 +7,10 @@
             <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background=""></div>
             <div class="container">
                 <div class="page-cover text-center">
-                    <h2 class="page-cover-tittle f_48">Blog Details page</h2>
+                    <h2 class="page-cover-tittle f_48">Temas</h2>
                     <ol class="breadcrumb">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li class="active">Blog Details</li>
+                        <li><a href="blog.html">Tema</a></li>
                     </ol>
                 </div>
             </div>
@@ -150,7 +149,8 @@
                                 <div *ngFor="let tema of tema_by_categorys" class="media post_item">
                                     <!-- <img src="http://127.0.0.1:8000" alt="post"> -->
                                     <div class="media-body">
-                                        <a [routerLink]="['/tema-details',tema.id_tema,tema.tema_categoria_id ]"><h3>{{tema.titulo}}</h3></a>
+                                        <a [routerLink]="['/tema-details',tema.id_tema,tema.tema_categoria_id]">   
+                                         <h3>{{tema.titulo}}</h3></a>
                                         <p>{{tema.fecha}}</p>
                                     </div>
                                 </div>

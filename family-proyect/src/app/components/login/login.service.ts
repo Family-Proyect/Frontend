@@ -34,6 +34,9 @@ export class LoginService {
   setLogin(isLoggedIn: boolean) {
     this.isLoggedIn=isLoggedIn;    
   }
+  getIsLogin() {
+    return this.isLoggedIn;    
+  }
   setIsLogin(isLoggedIn: string) {
     localStorage.setItem('isLogged', isLoggedIn);
   }
