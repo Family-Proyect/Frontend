@@ -38,7 +38,7 @@
                 <ngb-carousel *ngIf="images3">
                     <ng-template *ngFor="let tema of _temas" ngbSlide>
                         <div class="picsum-img-wrapper">
-                            <img class="img-cau" src="http://127.0.0.1:8000{{tema.image}}" style="object-fit: cover!important;" alt="Random first slide">
+                            <img class="img-cau" src="{{url}}{{tema.image}}" style="object-fit: cover!important;" alt="Random first slide">
                         </div>
                         <div class="carousel-caption">
                             <div class="banner_content">
@@ -63,7 +63,7 @@
             <div *ngFor="let tema of _temas" class="col-md-6" style="margin-top: 15px;">
                 <div class="categories_post">
                     <!-- <img src="../../../assets/image/blog/cat-post/cat-post-3.jpg" alt="post"> -->
-                    <img src="http://127.0.0.1:8000{{tema.image}}"
+                    <img src="{{url}}{{tema.image}}"
                         style="width: 468px!important; height: 200px!important; object-fit: cover!important;" alt="post">
                     <div class="categories_details">
                         <div class="categories_text">
@@ -176,7 +176,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <img class="" src="http://127.0.0.1:8000{{tema.image}}" style="width: 570px;height: 300px; object-fit: cover!important;" alt="Random first slide">
+                        <img class="" src="{{url}}{{tema.image}}" style="width: 570px;height: 300px; object-fit: cover!important;" alt="Random first slide">
                     </div>
                     </div>
                 </ng-template>

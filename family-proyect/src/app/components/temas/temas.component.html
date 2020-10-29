@@ -91,7 +91,7 @@
                                </div>
                                 <div class="col-md-9">
                                     <div class="blog_post">
-                                        <img src="http://127.0.0.1:8000{{tema.images}}" style="width: 680px!important; height: 280px!important;" alt="">
+                                        <img src="{{url}}{{tema.images}}" style="width: 680px!important; height: 280px!important;" alt="">
                                         <div class="blog_details">
                                             <a [routerLink]="['/tema-details',tema.id_tema,tema.categoria]"><h2>{{tema.titulo| titlecase}}</h2></a>
 

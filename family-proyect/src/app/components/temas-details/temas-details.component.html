@@ -24,15 +24,15 @@
                         <div class="single-post row">
                             <div class="col-lg-12">
                                 <div class="feature-img">
-                                    <img class="img-fluid" src="http://127.0.0.1:8000/media/{{images_temas[0].image}}" style="width:800px; height:400px; object-fit: cover!important;"  alt="images">
+                                    <img class="img-fluid" src="{{url}}/media/{{images_temas[0].image}}" style="width:800px; height:400px; object-fit: cover!important;"  alt="images">
                                 </div>		
-                                <div class="fb-like" data-href="http://chjoguer.pythonanywhere.com/" data-width="" data-layout="button_count"  data-action="like" data-size="small" data-share="true"></div>
+                                <!-- <div class="fb-like" data-href="http://chjoguer.pythonanywhere.com/" data-width="" data-layout="button_count"  data-action="like" data-size="small" data-share="true"></div> -->
 							
                             </div>
 
                             <div   class="col-lg-12 col-md-12 blog_details">
                                 <h2>{{tema.titulo| titlecase}}</h2>
-                              
+                                <p>xx{{url}}</p>
                                 <div [innerHTML]="tema.descripcion" style="text-align: justify;"></div>
 
                             </div>

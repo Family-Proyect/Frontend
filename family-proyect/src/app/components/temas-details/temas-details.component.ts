@@ -4,6 +4,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute, NavigationEnd, Router, RouterEvent } from '@angular/router';
 import { tr } from 'date-fns/locale';
 import { Subject } from 'rxjs';
+import { environment } from 'src/environments/environment.prod';
 import { CategoiraTemaService} from '../../components/temas-details/services/categoira-tema.service';
 import { TemaService } from '../../components/temas-details/services/tema.service';
 
@@ -34,6 +35,8 @@ export class TemasDetailsComponent implements OnInit {
 
 
   }
+  private url  = environment.apiUrl;
+
   id_tema:string;
   id_category:string;
   video:any;

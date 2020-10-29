@@ -22,9 +22,7 @@ const routes: Routes = [
     { path: 'login', component: LoginComponent,canActivate:[LoginGuard]},
     { path: 'contact', component: ContactanosComponent},
     { path: 'calendar', component: CalendarComponent,canActivate:[AuthGuard]},
-
     { path: 'testimonios', component: TestimoniosComponent},
-
     { path: 'temas/:id_categoria', component: TemasComponent},
     { path: 'recuperar-contrasenia', component:ResetPasswordComponent },
     { path: 'tema-details/:id/:id_categoria', component:TemasDetailsComponent},
