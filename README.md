@@ -1,6 +1,17 @@
 # Frontend
-Frontend Angular 10
+# Proyecto de ingenieria de software 1
+# Mi Familia EC
+
+
 Integrantes:
-Christian Guerrero Garcia
-Luis Carrasco
-Leonardo Mendoza
+* Luis Carrasco
+* Christian Guerrero
+* Leonardo Mendoza
+
+
+## Frameworks
+```
+Frontend: Angular V10
+Backend: Django
+Movil: Ionic
+```
