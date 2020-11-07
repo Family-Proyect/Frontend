@@ -62,7 +62,6 @@
         <div class="row">
             <div *ngFor="let tema of _temas" class="col-md-6" style="margin-top: 15px;" [routerLink]="['/tema-details',tema.id,tema.id_categoria ]">
                 <div class="categories_post">
-                    <!-- <img src="../../../assets/image/blog/cat-post/cat-post-3.jpg" alt="post"> -->
                     <img src="{{url}}{{tema.image}}"
                         style="width: 468px!important; height: 200px!important; object-fit: cover!important;" alt="post">
                     <div class="categories_details">
@@ -241,18 +240,7 @@
                             on the job is beyond reproach. inappropriate behavior is often laughed.</p>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="sermons_content">
-                        <h3 class="title_color">Did not find your Package? Feel free to ask us. We‘ll make it for you
-                        </h3>
-                        <ul class="list_style sermons_category">
-                            <li><i class="lnr lnr-user"></i><span>Categories: </span><a href="#"> Travor James</a></li>
-                            <li><i class="lnr lnr-database"></i><span>Sermon Speaker: </span> Prayer</li>
-                            <li><i class="lnr lnr-calendar-full"></i><span>Date:</span> 5th may, 2018</li>
-                        </ul>
-                        <a href="#" class="btn_hover btn_hover_two">View More Details</a>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
