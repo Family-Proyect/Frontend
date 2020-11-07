@@ -33,6 +33,7 @@ import { Spanish } from 'flatpickr/dist/l10n/es';
 import { HttpClient } from '@angular/common/http';
 import {  map } from 'rxjs/operators';
 import {AgendarService} from './service/agendar.service'
+import { environment } from 'src/environments/environment.prod';
 registerLocaleData(localeEs);
 const colors: any = {
   red: {
@@ -68,7 +69,8 @@ interface Consejeria {
   
 })
 export class CalendarComponent implements OnInit {
-  
+  private url  = environment.apiUrl;
+
 
    flatpickrFactory() {
     flatpickr.localize(Spanish);
@@ -158,7 +160,7 @@ export class CalendarComponent implements OnInit {
 
   fetchEvents(): void {
     this.events$ = this.http
-      .get('http://localhost:8000/api/get_consejerias/').pipe(    
+      .get(this.url+'/api/get_consejerias/').pipe(    
          map((  data  : any) => {
           console.log(data);
           const results=data;
