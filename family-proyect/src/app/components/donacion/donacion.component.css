@@ -1,10 +1,105 @@
+/*========== team_area css ===========*/
+.team_item2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.team_item2 .team_img2 {
+  position: relative;
+  z-index: 1;
+}
+
+.team_item2 .team_img2:before {
+  content: "";
+  top: 0;
+  left: 0;
+  background: #00c8e6;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  -webkit-transition: color 0.3s, all 0.3s linear;
+  -o-transition: color 0.3s, all 0.3s linear;
+  transition: color 0.3s, all 0.3s linear;
+  z-index: 0;
+}
+
+
+.team_item2 .team_img2 img {
+  max-width: 100%;
+}
+
+.team_item2 .team_img2 ul {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  opacity: 0;
+  margin-top: 10px;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.team_item2 .team_img2 ul li {
+  display: inline-block;
+  margin: 0px 7px;
+}
+
+.team_item2 .team_img2 ul li a {
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.30;
+}
+
+.team_item2 .team_img2 ul li a:hover {
+  opacity: 1;
+}
+
+.team_item2 .content {
+  padding-top: 28px;
+}
+
+.team_item2 .content h3 {
+  font-size: 18px;
+  line-height: 22px;
+  color: #222222;
+  margin-bottom: 0px;
+}
+
+.team_item2 .content p {
+  font-weight: 300;
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+
+.team_item2:hover .team_img2:before {
+  opacity: 0.75;
+}
+
+.team_item2:hover .team_img2 ul {
+  margin-top: 0px;
+  opacity: 1;
+}
+
+
+
+
+
+
+
 
 .team_item2 .team_img2 {
     position: relative;
     z-index: 1;
   }
   
-  .team_item2 .team_img2:before {
+.team_item2 .team_img2:before {
       content: "";
       top: 0;
       left: 18px;
@@ -18,7 +113,7 @@
       transition: color 0.3s, all 0.3s linear;
       z-index: 0;
       border: 49px;
-      border-radius: 20%;
+      border-radius: 25%;
   }
   
 
@@ -58,3 +153,18 @@
   .btn:hover {
     cursor: pointer;
   }
+
+  
+  /* input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #ffa500;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+} */
