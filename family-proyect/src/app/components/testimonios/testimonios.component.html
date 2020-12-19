@@ -14,6 +14,7 @@
 
 
 <!--================About Area =================-->
+<!--
 <section class="about_area section_gap" style="padding-top: 1px!important;">
     <div class="container">
         <div class="section_title text-center">
@@ -70,21 +71,33 @@
         </div>
     </div>
 </section>
+-->
 <section class="event_blog_area section_gap">
     <div class="container">
         <div class="row ministries_info">
-            <div *ngFor="let testim of testimonios"  class="col-lg-4 col-md-6 col-sm-6">
+            <div *ngFor="let testim of testimonios | paginate: { itemsPerPage: 6, currentPage: p  }"  class="col-lg-6 col-md-6 col-sm-6">
                 <div class="event_post"  style="text-align: justify;">
-                    <img src="image/blog1.jpg" alt="">
-                    <a ><h2 class="event_title">{{testim.titulo | titlecase}}</h2></a>
-                    <p >{{testim.descripcion}}</p>
+                    <!-- <img src="image/blog1.jpg" alt="">-->
+                    <p class="event_title" style="text-align: center; margin: auto; font-size: xx-large;" >{{testim.titulo | titlecase}}</p>
+                    <p style="text-align: justify; margin: auto; font-style: italic; font-size: x-large;">"{{testim.descripcion}}"</p>
+                    <p style="text-align: center; margin: auto; font-style: normal; font-size: large;">-{{testim.usuario | titlecase}}</p>
                 </div>
             </div>
         </div>
     </div>
-</section>
+    <br>
+    <br>
+    <br>
+    <pagination-controls (pageChange)="p = $event" style="text-align: center; margin: auto;" 
+        maxSize="6"
+        directionLinks="true"
+        autoHide="true"
+        responsive="true"
+        previousLabel="Anterior"
+        nextLabel="Siguiente"
+    ></pagination-controls>
+
 <!--================About Area =================-->
-<section class="about_area section_gap" style="padding-top: 1px!important;">
     <div class="container">
         <div class="comment-form">
             <h4>Envianos tu testimonio</h4>
@@ -105,13 +118,13 @@
                   </div>										
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control"  formControlName="title" id="subject" placeholder="Tema del testimonio" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Tema del testimonio'" [ngClass]="{ 'is-invalid': submitted && f.title.errors }">
+                    <input type="text" class="form-control" maxlength="35" formControlName="title" id="subject" placeholder="Tema del testimonio" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Tema del testimonio'" [ngClass]="{ 'is-invalid': submitted && f.title.errors }">
                     <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
                         <div *ngIf="f.title.errors.required">El asunto es requerido</div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <textarea class="form-control mb-10"  formControlName="description" rows="5" name="message" placeholder="Escriba su testimonio" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Escriba su testimonio'" required="" [ngClass]="{ 'is-invalid': submitted && f.description.errors }"></textarea>
+                    <textarea class="form-control mb-10" maxlength="250" formControlName="description" rows="5" name="message" placeholder="Escriba su testimonio (máximo 250 cáracteres)" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Escriba su testimonio (máximo 250 cáracteres)'" required="" [ngClass]="{ 'is-invalid': submitted && f.description.errors }"></textarea>
                     <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
                         <div *ngIf="f.description.errors.required">Tu opinion es requerida</div>
                         <div *ngIf="f.description.errors.minlength">Minimo 10 caracateres debes de ingresar</div>
