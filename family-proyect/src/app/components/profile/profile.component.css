@@ -399,3 +399,14 @@ footer p a:hover {
     color: #9f26aa;
     text-decoration: none;
 }
+
+
+p {
+    font-family: Lato;
+  }
+  .error-message {
+    color: red;
+  }
+  input.ng-touched.ng-invalid {
+    border: 1px solid red;
+  }

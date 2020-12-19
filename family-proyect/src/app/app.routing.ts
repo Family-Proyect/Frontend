@@ -34,7 +34,7 @@ const routes: Routes = [
     { path: 'registrarse', component: RegisterComponent},
     { path: 'recomendacion', component: TipsRecomendationsComponent},
     { path: 'donacion', component: DonacionComponent},
-    { path: 'profile', component: ProfileComponent},
+    { path: 'profile', component: ProfileComponent,canActivate:[AuthGuard]},
 
     // otherwise redirect to home
 ];
