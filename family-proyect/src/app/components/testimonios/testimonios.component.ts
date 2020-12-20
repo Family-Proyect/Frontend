@@ -11,7 +11,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
 export class TestimoniosComponent implements OnInit {
 
   p:number =1;
-  testimonios: any[];  
+  testimonios: any[];
 
   images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
 
@@ -73,7 +73,12 @@ export class TestimoniosComponent implements OnInit {
     this.serviceTestimonios.get_testimonios().subscribe((data)=>{
       console.log("...sas...")
       console.log(data)
-      this.testimonios=data;
+      let response = [];
+      for (let i = 0; i < data.length; i++) {
+        response[i] = data[data.length-1-i];
+      }
+      console.log(response);
+      this.testimonios=response;
     },
     (error)=>{
       console.log(error)
