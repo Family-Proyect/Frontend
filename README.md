@@ -1,5 +1,5 @@
 # Frontend
-# Proyecto de ingenieria de software 1
+# Proyecto de ingenieria de software 2020-1 - 2020-2
 # Mi Familia EC
 
 
@@ -9,7 +9,7 @@ Integrantes:
 * Leonardo Mendoza
 
 
-## Frameworks
+## Frameworks:
 ```
 Frontend: Angular V10
 Backend: Django
