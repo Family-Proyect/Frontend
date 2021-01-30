@@ -20,6 +20,7 @@ import { TipsRecomendationsComponent } from './components/tips-recomendations/ti
 import { DonacionComponent } from './components/donacion/donacion.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { PoliticasComponent } from './components/politicas/politicas.component';
+import { NosotrosComponent } from './components/nosotros/nosotros.component';
 
 const routes: Routes = [
     { path: '', component: IndexComponent },
@@ -37,6 +38,7 @@ const routes: Routes = [
     { path: 'donacion', component: DonacionComponent},
     { path: 'profile', component: ProfileComponent,canActivate:[AuthGuard]},
     { path: 'politicas', component: PoliticasComponent},
+    { path: 'nosotros', component: NosotrosComponent},
 
     // otherwise redirect to home
 ];
