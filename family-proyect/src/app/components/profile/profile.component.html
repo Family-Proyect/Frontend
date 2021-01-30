@@ -38,9 +38,9 @@
 								<h6>{{data_profile.Email}}</h6>
                                 <!-- <a href="#pablo" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-dribbble"></i></a>-->
                                 <!-- <a href="#pablo" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-pinterest"></i></a>  -->
-                                <h5  class="title">Enlace para la consejeria ZOOM</h5>
+                                <!-- <h5  class="title">Enlace para la consejeria ZOOM</h5>
 
-                                <a href="https://us04web.zoom.us/j/2939684881?pwd=cDNidjJDNStQbWZuRElCd0hPNzA4dz09" target="_blank" class="btn btn-just-icon btn-link"><i class="fas fa-video"></i></a>
+                                <a href="https://us04web.zoom.us/j/2939684881?pwd=cDNidjJDNStQbWZuRElCd0hPNzA4dz09" target="_blank" class="btn btn-just-icon btn-link"><i class="fas fa-video"></i></a> -->
 
 	                        </div>
 	                    </div>
@@ -75,6 +75,12 @@
                                 <a class="nav-link" href="#image" role="tab" data-toggle="tab">
                                   <i class="material-icons">image</i>
                                     Cambiar Imagen
+                                </a>
+                            </li>
+                            <li *ngIf="data_profile.estado!=0" class="nav-item">
+                                <a class="nav-link" href="#zoom" role="tab" data-toggle="tab">
+                                  <i class="material-icons">camera_alt</i>
+                                    Consejeria
                                 </a>
                             </li>
                           </ul>
@@ -277,7 +283,24 @@
                   </div>
                   <div *ngIf="showMessagePassword" role="alert" class="alert alert-success alert-dismissible fade show"><strong >Modificación exitoso!</strong>Cambio de contraseña exitoso!!. </div>
 
-      		</div>
+              </div>
+              <div class="tab-pane text-center gallery"  role="tabpanel" class="tab-pane fade"  id="zoom">
+                <div class="row">
+                    <div class="col-md-4 mx-auto justify-content-center ">   
+                        Usted tiene una consejeria pendiente. Por favor no olvidarse de asistir su consejero lo atendera  
+                        Desde <b>{{inicio_d}}</b> hasta <b>{{termina_d}}</b>
+                        
+                    </div>
+                    <br/>
+                    <br/>
+                    <div class="col-md-12 text-center mx-auto justify-content-center">
+                        <a href={{data_profile.consejeria}} target="_blank" class="btn btn_hover btn_hover_two center" >
+                            Abrir Zoom
+                        </a>
+                    </div>
+      				
+                  </div>
+            </div>
           </div>
 
         
