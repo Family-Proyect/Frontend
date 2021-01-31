@@ -15,3 +15,5 @@ Frontend: Angular V10
 Backend: Django
 Movil: Ionic
 ```
+
+1,2,3
