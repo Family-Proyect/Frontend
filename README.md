@@ -15,8 +15,3 @@ Frontend: Angular V10
 Backend: Django
 Movil: Ionic
 ```
-
-1,2,3,45,6
-dfhgndfgnhfdghnh
-fdghfdghfdghf
-nbfghnfgnhgn
